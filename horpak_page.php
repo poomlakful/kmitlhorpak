@@ -67,7 +67,6 @@ function list_room() {
 	echo '
 		<table class="table table-bordered">
 			<tr text-align="center">
-				<th>#</th>
 				<th>ขนาดห้อง</th>
 				<th>ประเภทห้อง</th>
 				<th>Furniture</th> 
@@ -76,7 +75,6 @@ function list_room() {
 
 			</tr>';
 	while($row = mysqli_fetch_array($result)) {
-		$id = $row["detailId"];
 		$size = $row["sizeWH"];
 		$type = $row["roomType"];
 		$furn = $row["furniture"];
@@ -84,7 +82,6 @@ function list_room() {
 		$rent = $row["rent"];
 		echo "   
 			<tr>
-				<td>{$id}</td>
 				<td>{$size}</td>
 				<td>{$type}</td>
 				<td>{$furn}</td> 
@@ -100,10 +97,20 @@ function list_room() {
 
 function album() {
 ?>
-	<hr><h3>ภาพถ่าย</h3>
+	<hr>
+	<div style="margin-bottom:20px">
+		<h3>ภาพถ่าย</h3>
+	</div>
 	<div class="row">
-		<div class="col-md-4" style="height:300px;border:solid 1px">
-			
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<a class="hov" href="#" style="color:#424242">
+					<div class="panel-body" style="height:220px;text-align:center;background-color:rgb(232, 232, 232);padding-top:85px">
+						<!--<span class="glyphicon glyphicon-plus" aria-hidden="true" style="font-size:30px"></span><br>-->
+						<span style="font-size:30px">เพิ่มรูปภาพ</span>
+					</div>
+				</a>
+			</div>
 		</div>
 	</div>
 

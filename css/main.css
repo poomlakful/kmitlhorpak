@@ -143,3 +143,7 @@ main p {
     bottom: 30px;
   }
 }
+
+a.hov:focus, a.hov:hover {
+    text-decoration: none;
+}

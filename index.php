@@ -128,12 +128,17 @@ function list_horpak($sql) {
 		$detail = $row["detailMore"];
 		$price = $row["deposit"];
 		$contract = $row["horpakTel"];
-		echo " 
-			<div class='col-sm-6 col-md-4'>
+		echo "<div class='col-sm-6 col-md-4'>
 				<div class='thumbnail'>
-					<a href='horpak_page.php?horpakId={$id}'> 
-						<img src='img/logo.png' alt='horpak_page.php?horpakId={$id}' target='_blank' style='width:100%;'>
-					</a>
+					<a href='horpak_page.php?horpakId={$id}'>";
+						if($row['horpakImage']) {
+							echo '<dd>'
+							     . '<img src="data:image/jpeg;base64,' . base64_encode($row['horpakImage']) . '" style="width:100%">'
+							     . '</dd>';
+						} else {
+							echo '<img src="img/logo.jpg" style="width:100%">';
+						}
+		echo"		</a>
 					<div class='caption'>
 						<h3>{$name}</h3>
 						<p>
