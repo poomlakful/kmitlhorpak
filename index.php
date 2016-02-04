@@ -4,7 +4,7 @@
 </div>
 <div class="container" style="margin-top:20px">
 	<div class="row">
-		<div class="hidden-xs col-md-3">
+		<div class="hidden-xs hidden-sm col-md-3">
 			<?php include('process/page_left.php'); ?>
 		</div>
 		<div class="col-md-9">
@@ -18,7 +18,7 @@
 		</div>
 	</div>
 </div>
-<b>f</b>
+
 <?php
 include("process/footer.php");
 
@@ -84,7 +84,7 @@ function select_form() {
 	$result = mysqli_query($cn,$sql);
 ?>
 	<form class="form-inline" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-		เลือกประเภทหอพัก : <select class="form-control" name="select_type">
+		<span class="top-space-moile">เลือกประเภทหอพัก : </span><select class="top-space-moile form-control" name="select_type">
 			<option value="all">ทั้งหมด</option>
 			<?php
 			$sql = "SELECT *
@@ -96,7 +96,7 @@ function select_form() {
 			}
 			?>
 		</select>&nbsp;&nbsp;
-		เลือกโซน : <select class="form-control" name="select_zone">
+		<span class="top-space-moile">เลือกโซน : </span><select class="top-space-moile form-control" name="select_zone">
 			<option value="all">ทั้งหมด</option>
 			<?php
 			$sql = "SELECT *
@@ -108,7 +108,7 @@ function select_form() {
 			}
 			?>
 		</select>&nbsp;&nbsp;
-		<input class="btn btn-primary" type="submit" name="sent_select">
+		<input class="top-space-moile-btn btn btn-primary" type="submit" name="sent_select">
 	</form><br>
 <?php
 	mysqli_close($cn);

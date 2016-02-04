@@ -1,7 +1,7 @@
 <?php include("process/header.php"); ?>
 <div class="container" style="margin-top:20px">
 	<div class="row">
-		<div class="hidden-xs col-md-3">
+		<div class="hidden-xs hidden-sm col-md-3">
 			<?php include('process/page_left.php'); ?>
 		</div>
 		<div class="col-md-9">
@@ -36,23 +36,29 @@ function hor_detail() {
 		$elec = $row["unitElec"];
 		$contract = $row["horpakTel"];
 		echo " <h3>{$name}</h3><hr>";
-		if($row['horpakImage']) {
-			echo '<dd style="float:left;margin-right:20px">'
-			     . '<img src="data:image/jpeg;base64,' . base64_encode($row['horpakImage']) . '" style="height:160px;">'
-			     . '</dd>';
-		} else {
-			echo '<img src="img/logo.jpg" style="height:160px;float:left;margin-right:20px">';
-		}
-		
-		echo "<b>ประเภท :</b> {$type}<br>
-			<b>โซน :</b> {$zone}<br>
-			<b>รายละเอียด :</b> {$detail}<br>
-			<b>รายละเอียด Internet :</b> {$internet}<br>
-			<b>รายละเอียดค่ามัดจำ :</b> {$price}<br>
-			<b>ค่าน้ำ :</b> {$water}<br>
-			<b>ค่าไฟ :</b> {$elec}<br>
-			<b>รายละเอียดการติดต่อ :</b> {$contract}<br>
-			<hr>";
+		echo '<div class="row">';
+			echo '<div class="col-md-4" style="padding-right:20px">';
+					if($row['horpakImage']) {
+						echo '<dd>'
+						     . '<img src="data:image/jpeg;base64,' . base64_encode($row['horpakImage']) . '" style="width:100%">'
+						     . '</dd>';
+					} else {
+						echo '<img src="img/logo.jpg" style="width:100%;">';
+					}
+			echo '</div>';
+			echo "<div class='detail-horpak-page col-md-8'>
+					<p>
+						<b>ประเภท :</b> {$type}<br>
+						<b>โซน :</b> {$zone}<br>
+						<b>ค่าน้ำ :</b> {$water}<br>
+						<b>ค่าไฟ :</b> {$elec}<br>
+					</p>
+					<p><b>รายละเอียด :</b><br>{$detail}</p>
+					<p><b>รายละเอียด Internet :</b><br>{$internet}</p>
+					<p><b>รายละเอียดค่ามัดจำ :</b><br>{$price}</p>
+					<p><b>รายละเอียดการติดต่อ :</b><br> {$contract}</p>
+				</div>";
+		echo '</div><hr>';
 	}
 	mysqli_close($cn);
 }
