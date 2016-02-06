@@ -149,12 +149,9 @@ a.hov:focus, a.hov:hover {
 }
 
 @media screen and (max-width: 767px) {
-  .top-space-moile {
-    display: block;
-  }
-  .top-space-moile-btn {
-    margin-top: 20px;
-    width: 90%;
+  .btn-moile {
+    margin-top:10px;
+    width:100%;
   }
   .detail-horpak-page {
     margin-top: 20px;

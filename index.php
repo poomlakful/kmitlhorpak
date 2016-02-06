@@ -94,8 +94,8 @@ function select_form() {
 			while($row = mysqli_fetch_array($result)) {
 				echo "<option value='".$row['horpak_typeName']."' onchange='loadhorlist(this.value)''>{$row['horpak_typeName']}</option>";
 			}
-			?>
-		</select>&nbsp;&nbsp;
+			?>&nbsp;&nbsp;
+		</select>
 		<span class="top-space-moile">เลือกโซน : </span><select class="top-space-moile form-control" name="select_zone">
 			<option value="all">ทั้งหมด</option>
 			<?php
@@ -106,9 +106,11 @@ function select_form() {
 			while($row = mysqli_fetch_array($result)) {
 				echo "<option value='".$row['zoneName']."'>{$row['zoneName']}</option>";
 			}
-			?>
-		</select>&nbsp;&nbsp;
-		<input class="top-space-moile-btn btn btn-primary" type="submit" name="sent_select">
+			?>&nbsp;&nbsp;
+		</select>
+		<div style="display:inline;text-align:center">
+			<input class="btn-moile btn btn-primary" type="submit" name="sent_select">
+		</div>
 	</form><br>
 <?php
 	mysqli_close($cn);
