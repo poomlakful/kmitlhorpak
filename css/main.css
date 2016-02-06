@@ -157,3 +157,8 @@ a.hov:focus, a.hov:hover {
     margin-top: 20px;
   }
 }
+
+iframe {
+    display: block;       /* iframes are inline by default */
+    width: 100%;
+}
