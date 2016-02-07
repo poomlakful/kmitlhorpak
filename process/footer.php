@@ -1,4 +1,5 @@
-	<div class="fb-page hidden-md hidden-lg"
+	<div class="container">
+		<div class="fb-page hidden-md hidden-lg"
 		data-href="https://www.facebook.com/kmitlhorpak"
 		data-hide-cover="false"
 		data-show-facepile="false"
@@ -8,6 +9,7 @@
 				<a href="https://www.facebook.com/kmitlhorpak">Kmitlhorpak</a>
 			</blockquote>
 		</div>
+	</div>
 	</div>
 	<hr>
 	<br><br><center>Copyright &copy; poomdev.zz.mu 2015<br>
