@@ -82,15 +82,15 @@ function list_room() {
 		WHERE horpakId = {$_GET['horpakId']};";
 	$result = mysqli_query($cn,$sql);
 	echo '
-		<table class="table table-bordered">
-			<tr text-align="center">
-				<th>ขนาดห้อง</th>
-				<th>ประเภทห้อง</th>
-				<th>Furniture</th> 
-				<th>รายละเอียดเพิ่มเติม</th>
-				<th>ค่าเช่า</th>
-
-			</tr>';
+		<div style="width:100%;overflow:scroll">
+			<table class="table table-bordered">
+				<tr text-align="center">
+					<th>ขนาดห้อง</th>
+					<th>ประเภทห้อง</th>
+					<th>Furniture</th> 
+					<th>รายละเอียดเพิ่มเติม</th>
+					<th>ค่าเช่า</th>
+				</tr>';
 	while($row = mysqli_fetch_array($result)) {
 		$size = $row["sizeWH"];
 		$type = $row["roomType"];
@@ -98,15 +98,16 @@ function list_room() {
 		$memo = $row["memorandum"];
 		$rent = $row["rent"];
 		echo "   
-			<tr>
-				<td>{$size}</td>
-				<td>{$type}</td>
-				<td>{$furn}</td> 
-				<td>{$memo}</td>
-				<td>{$rent}</td>
-			</tr>";
+				<tr>
+					<td>{$size}</td>
+					<td>{$type}</td>
+					<td>{$furn}</td> 
+					<td>{$memo}</td>
+					<td>{$rent}</td>
+				</tr>";
 	}
 	echo '</table>
+		</div>
 		<a class="btn btn-primary" href="add_room.php?horpakId='.$_GET['horpakId'].'" role="button" style="float:right">เพิ่มห้องพัก</a>
 	';
 	mysqli_close($cn);

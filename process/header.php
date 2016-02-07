@@ -45,10 +45,62 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="admin/" target="_blank"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> login</a></li>
+        <li><a href="" target="_blank" data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> login</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<!-- Modal -->
+<div id="loginModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="input-group">
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Username">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+              </div>
+              <div class="input-group" style="margin-top:10px">
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Password">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
+              </div>
+              <button href="#" type="button" class="btn btn-primary" style="display:block;width:100%;margin-top:10px">Log in</button>
+              <div style="text-align:center">
+                <a class="login-link" href="#">Lost your password?</a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-group">
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Username">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+              </div>
+              <div class="input-group" style="margin-top:10px">
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Password">
+                <div class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></div>
+              </div>
+              <button href="#" type="button" class="btn btn-primary" style="display:block;width:100%;margin-top:10px">Log in</button>
+              <div style="text-align:center">
+                <a class="login-link" href="#">Lost your password?</a>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </div>
+</div>
 
     

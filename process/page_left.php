@@ -7,7 +7,7 @@ function facebook_block() {
 ?>
 		<div class="panel panel-default">
 			<div class="panel-heading">Facebook</div>
-			<div class="panel-body" style="padding:0">
+			<div class="panel-body" style="padding:0;overflow:hidden">
 				<div class="fb-page" 
 					data-href="https://www.facebook.com/kmitlhorpak" 
 					data-tabs="timeline" 
