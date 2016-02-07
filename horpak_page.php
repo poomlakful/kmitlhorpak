@@ -9,17 +9,6 @@
 			<?php list_room(); ?>
 			<div style="clear:both"></div>
 			<?php album(); ?>
-			<div class="fb-page hidden-md hidden-lg"
-				data-href="https://www.facebook.com/kmitlhorpak"
-				data-hide-cover="false"
-				data-show-facepile="false"
-				data-show-posts="false">
-				<div class="fb-xfbml-parse-ignore">
-					<blockquote cite="https://www.facebook.com/kmitlhorpak">
-						<a href="https://www.facebook.com/kmitlhorpak">Kmitlhorpak</a>
-					</blockquote>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>

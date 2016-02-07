@@ -1,17 +1,17 @@
 <?php
 include("process/header.php");
 echo '<div class="container">';
-if(isset($_POST['send'])) {
-	if(antispam()) {
-		process_add();
-		add_form();
+	if(isset($_POST['send'])) {
+		if(antispam()) {
+			process_add();
+			add_form();
+		} else {
+			echo '<div class="alert alert-danger" role="alert">รหัสป้องกัน Spam ไม่ถูกต้อง </div>';
+			add_form_value();
+		}
 	} else {
-		echo '<div class="alert alert-danger" role="alert">รหัสป้องกัน Spam ไม่ถูกต้อง </div>';
-		add_form_value();
+		add_form();
 	}
-} else {
-	add_form();
-}
 echo '</div>';
 include("process/footer.php");
 

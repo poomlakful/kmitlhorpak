@@ -1,3 +1,14 @@
+	<div class="fb-page hidden-md hidden-lg"
+		data-href="https://www.facebook.com/kmitlhorpak"
+		data-hide-cover="false"
+		data-show-facepile="false"
+		data-show-posts="false">
+		<div class="fb-xfbml-parse-ignore">
+			<blockquote cite="https://www.facebook.com/kmitlhorpak">
+				<a href="https://www.facebook.com/kmitlhorpak">Kmitlhorpak</a>
+			</blockquote>
+		</div>
+	</div>
 	<hr>
 	<br><br><center>Copyright &copy; poomdev.zz.mu 2015<br>
 	<script type="text/javascript" language="javascript1.1" src="http://tracker.stats.in.th/tracker.php?sid=65839"></script><noscript><a target="_blank" href="http://www.stats.in.th/">www.Stats.in.th</a></noscript></center>
