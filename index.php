@@ -1,9 +1,9 @@
 <?php include("process/header.php"); ?>
-<div class="hidden-xs">
-	<img src='img/hormap.png' usemap="#Map" style='width:100%;'>
-</div>
-<div class="container" style="margin-top:20px">
-	<div class="row">
+<div class="container">
+	<div class="hidden-xs">
+		<img src='img/hormap.png' usemap="#Map" style='width:100%;'>
+	</div>
+	<div class="row" style="margin-top:20px">
 		<div class="hidden-xs hidden-sm col-md-3">
 			<?php include('process/page_left.php'); ?>
 		</div>
@@ -133,7 +133,7 @@ function list_horpak($sql) {
 		echo "<div class='col-sm-6 col-md-4'>
 				<div class='thumbnail'>
 					<a href='horpak_page.php?horpakId={$id}'>";
-						if($row['horpakImage']) {
+						if(isset($row['horpakImage'])) {
 							echo '<dd>'
 							     . '<img src="data:image/jpeg;base64,' . base64_encode($row['horpakImage']) . '" style="width:100%">'
 							     . '</dd>';

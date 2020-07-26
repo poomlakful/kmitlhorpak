@@ -38,7 +38,7 @@ function hor_detail() {
 		echo " <h3>{$name}</h3><hr>";
 		echo '<div class="row">';
 			echo '<div class="col-md-4" style="padding-right:20px">';
-					if($row['horpakImage']) {
+					if(isset($row['horpakImage'])) {
 						echo '<dd>'
 						     . '<img src="data:image/jpeg;base64,' . base64_encode($row['horpakImage']) . '" style="width:100%">'
 						     . '</dd>';
